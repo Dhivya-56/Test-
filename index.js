@@ -53,8 +53,19 @@ function resetForm(){
     document.getElementById("noteTitle").value = "";
         document.getElementById("noteContent").value = "";
 }
-function removeItem(e) {
-	e.target.parentElement.remove();
-}
 
-newbtn2.addEventListener("click", removeItem);
+function editNote(note){
+    document.getElementById("noteTitle").value=notearr.title;
+    document.getElementById("noteContent").value=notearr.content;
+    document.getElementById("").innerText="update";
+    document.getElementById("add_notes").onclick=()=>UpdateNote(notearr);
+
+}
+function deleteNote(note){
+    const confirmation=confirm("Are you sure you want to delete the notes?")
+    if(confirmation){
+        note=note.filter((value)=>value.title!==notearr.title)
+        display_notes()
+        clear_notes()
+    }
+}
