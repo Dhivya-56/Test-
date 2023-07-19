@@ -1,0 +1,17 @@
+#container{
+    margin:auto;
+    position:relative;
+    border:1px solid black;
+    padding:10px;
+    width:200px;
+    height:300px;
+}
+#myform{
+    padding:20px;
+}
+#button{
+    margin:auto;
+    position:relative;
+    top:10px;
+left:40px;
+}
